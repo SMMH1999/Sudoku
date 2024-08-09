@@ -41,7 +41,7 @@ class Sudoku:
                             self.__board[i][j] = num
                             if self.__generate():
                                 return True
-                            self.__board[i][j] = 0
+                            self.__board[i][j] = " "
                     return False
         return True
 
