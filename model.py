@@ -30,10 +30,13 @@ class Sudoku:
             it returns the correct value, otherwise it returns the false value.
         """
 
+        numbers = range(1, 10)
+        samples = random.sample(numbers, 9)
+
         for i in range(9):
             for j in range(9):
                 if self.__board[i][j] == " ":
-                    for num in range(1, 10):
+                    for num in samples:
                         if self.__is_valid(i, j, num):
                             self.__board[i][j] = num
                             if self.__generate():
